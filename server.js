@@ -3,7 +3,7 @@ const cors = require('cors')
 const express = require('express');
 
 const app = express();
-
+const PORT = process.env.PORT || 4000;
 app.use(cors())
 
 app.get('/', async (req, res) => {
@@ -19,5 +19,5 @@ app.get('/', async (req, res) => {
 
 });
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.listen(PORT, () => console.log(`Example app listening on port ${PORT}`))
 
